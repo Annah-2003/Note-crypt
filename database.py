@@ -31,3 +31,19 @@ def delete_task(task_id):
     cursor.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
     conn.commit()
     conn.close()
+
+def get_tasks_sorted_by_priority():
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM tasks ORDER BY priority")
+    tasks = cursor.fetchall()
+    conn.close()
+    return tasks
+
+def get_tasks_sorted_by_due_date():
+    conn = create_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM tasks ORDER BY due_date")
+    tasks = cursor.fetchall()
+    conn.close()
+    return tasks
