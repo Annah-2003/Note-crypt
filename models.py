@@ -1,11 +1,12 @@
 # models.py
 import sqlite3
+from typing import Tuple, List
 
-def create_connection():
+def create_connection() -> sqlite3.Connection:
     conn = sqlite3.connect('tasks.db')
     return conn
 
-def create_table():
+def create_table() -> None:
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute('''CREATE TABLE IF NOT EXISTS tasks (
@@ -16,4 +17,5 @@ def create_table():
     conn.commit()
     conn.close()
 
-create_table()
+if __name__ == "__main__":
+    create_table()
