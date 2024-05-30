@@ -1,4 +1,3 @@
-import sqlite3
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
 from apscheduler.schedulers.background import BackgroundScheduler
