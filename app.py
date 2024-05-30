@@ -1,3 +1,4 @@
+import sqlite3
 from flask import Flask, request, jsonify
 from flask_mail import Mail, Message
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -18,7 +19,7 @@ mail = Mail(app)
 def send_reminder(task):
     with app.app_context():
         msg = Message('Task Reminder', sender='your-email@example.com', recipients=['recipient@example.com'])
-        msg.body = f"Reminder: {task[1]} - {task[2]}"
+        msg.body = f"Reminder: {task[0]} - {task[1]}"
         mail.send(msg)
 
 # Scheduler for reminders

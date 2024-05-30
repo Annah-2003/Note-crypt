@@ -21,7 +21,7 @@ def update_task(task_id, title, description, status, priority, due_date, reminde
     conn = create_connection()
     cursor = conn.cursor()
     cursor.execute("UPDATE tasks SET title = ?, description = ?, status = ?, priority = ?, due_date = ?, reminder_time = ? WHERE id = ?", 
-                   (title, description, status, priority, due_date, reminder_time, task_id))
+                   (title, description, status,  priority, due_date, reminder_time, task_id))
     conn.commit()
     conn.close()
 

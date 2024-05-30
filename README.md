@@ -20,7 +20,7 @@
 
 # Installation
 ## Step 1: Clone the Repository
- git clone https://github.com/Annah-2003/
+ git clone https://github.com/Annah-2003/ 
  cd task-manager
 
 ## Step 2: Set Up a Virtual Environment
@@ -33,13 +33,13 @@
 ## Step 4: Configure Flask-Mail
  Edit app.py to include your email credentials.
 
- `app.config['MAIL_SERVER'] = 'smtp.example.com'
- app.config['MAIL_PORT'] = 587
- app.config['MAIL_USE_TLS'] = True
- app.config['MAIL_USERNAME'] = 'your-email@example.com'
- app.config['MAIL_PASSWORD'] = 'your-email-password'`
+ `app.config['MAIL_SERVER'] = 'smtp.example.com'`
+ `app.config['MAIL_PORT'] = 587`
+ `app.config['MAIL_USE_TLS'] = True`
+ `app.config['MAIL_USERNAME'] = 'your-email@example.com'`
+ `app.config['MAIL_PASSWORD'] = 'your-email-password'`
 
-# Database Setup
+## Database Setup
 
 ## Step 5: Create the Database and Table
  Create a file named models.py
@@ -51,12 +51,12 @@
  Create a file named database.py
 
 ## Step 7: Create the Flask Application
- Create a file named app.py
+ * Create a file named app.py
 
 # Running the Application
 
 ## Step 8: Start the Flask Server
- python app.py
+ * python app.py
 
 ## Step 9: View and Test the Application
  Open your web browser and navigate to http://127.0.0.1:5000. You can use tools like Postman to interact with the API.
